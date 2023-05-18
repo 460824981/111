@@ -259,7 +259,7 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
         if birth_day == 0:
             birthday_data = "今天{}哦，祝{}快乐！".format(value["name"], value["name"])
         else:
-            birthday_data = "{}：{}天".format(value["name"], birth_day)
+            birthday_data = "距离{}：{}天".format(value["name"], birth_day)
         # 将生日数据插入data
         data["data"][key] = {"value": birthday_data, "color": get_color()}
     headers = {
